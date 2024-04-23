@@ -11,7 +11,7 @@ router.put("/updateprofile/:useruid",updateCharger);
 router.get("/details",chargerDetails);
 router.get("/detailsbyid/:id",mapDetailsByid);
 router.put("/updaterate/:id",updaterating);
-router.delete("/elecharger/:id",deleteCharger);
+router.delete("/elecharger/:useruid",deleteCharger);
 router.get("/idtifyinguser/:useruid",usrByuid);
 
 export default router;
