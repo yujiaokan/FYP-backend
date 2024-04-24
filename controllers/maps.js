@@ -111,7 +111,8 @@ const user=await Maps.create({
   };
   
   export const deleteCharger = async (req, res, next) => {
-    const usercharge = await Maps.findOneAndDelete(req.params.useruid);
+    const userUid = req.params.useruid;
+    const usercharge = await Maps.findOneAndDelete({ useruid: userUid });
     if (!usercharge) return next(new ErrorHandler("usercharge not found", 404));
     
  
